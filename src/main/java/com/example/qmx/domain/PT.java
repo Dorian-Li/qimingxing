@@ -1,4 +1,5 @@
 package com.example.qmx.domain;
+
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
@@ -8,28 +9,24 @@ import lombok.Data;
 import java.util.Date;
 
 @Data
-@TableName(value ="ele")
-public class Ele {
+@TableName(value ="sd")
+public class PT {
 
     @TableId(value = "id", type = IdType.AUTO)
     private Long id;
 
-    @TableField("allPower")
-    private Double allPower;
+    @TableField("devName")
+    private String devName;
 
-    @TableField("lightPower")
-    private Double lightPower;
+    @TableField("status")
+    private Integer status;
 
-    @TableField("socketPower")
-    private Double socketPower;
+    @TableField("remain")
+    private Double remain;
 
-    @TableField("airconditionPower")
-    private Double airconditionPower;
-
-    @TableField("freshPower")
-    private Double freshPower;
+    @TableField("pressure")
+    private Double pressure;
 
     @TableField("time")
     private Date time;
-    
 }
